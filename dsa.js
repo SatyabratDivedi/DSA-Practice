@@ -17,5 +17,22 @@ function FibonacciNumber(numLength) {
   }
   return fibArray;
 }
-const data = FibonacciNumber(numLength);
+const d = FibonacciNumber(numLength);
+console.log(d);
+
+
+
+
+
+//3. nth Fibonacci number
+
+const n = 10;
+function fib(n) {
+ const fibArray = [0, 1];
+  for (let i = 2; i <= n; i++) {
+    fibArray.push(fibArray[i-1] + fibArray[i-2]);
+  }
+  return fibArray[n];
+}
+const data = fib(n);
 console.log(data);
