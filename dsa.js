@@ -5,7 +5,7 @@
 function isPalandrome(x) {
   return x < 0 ? false : x === Number(x.toString().split("").reverse().join(""))
 }
-console.log(isPalandrome(121))
+// console.log(isPalandrome(121))
 
 
 //2. Fibonacci Number
@@ -20,7 +20,7 @@ function FibonacciNumber(numLength) {
   return fibArray;
 }
 const d = FibonacciNumber(numLength);
-console.log(d);
+// console.log(d);
 
 
 //3. nth Fibonacci number
@@ -34,7 +34,17 @@ function fib(n) {
   return fibArray[n];
 }
 const data = fib(n);
-console.log(data);
+// console.log(data);
+
+//3. second method using recursion
+
+const fib2 = function (n) {
+  if (n == undefined) return 0;
+  if (n <= 1) return n;
+  return fib2(n - 1) + fib2(n - 2);
+};
+// console.log(fib(20));
+
 
 
 
@@ -53,7 +63,24 @@ const repetNum = () => {
       repetNumber.push(nums[i])
     }
   }
-  console.log("uniqArr: ", uniqArr)
-  console.log("repetNumber: ", repetNumber)
+  // console.log("uniqArr: ", uniqArr)
+  // console.log("repetNumber: ", repetNumber)
 }
 repetNum();
+
+
+//5. isOppositeSame
+
+const isOpposite = function (a, b){
+ return Array(...a).reverse().join("") === b
+}
+const res = isOpposite("satya", "ayas")
+// console.log(res)
+
+
+//6. isAnagram
+
+const isAnagtam = function (a, b){
+  return (a.split('').sort().join('') === b.split('').sort().join(''))
+}
+// console.log(isAnagtam("satya", "ysata"))
