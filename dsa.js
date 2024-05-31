@@ -84,3 +84,37 @@ const isAnagtam = function (a, b){
   return (a.split('').sort().join('') === b.split('').sort().join(''))
 }
 // console.log(isAnagtam("satya", "ysata"))
+
+
+//7. find the second largest number
+
+const arr = [19, 32,32, 23, 14, 33,33, 5]
+const secondLargestNum = function (x) {
+
+  //first method
+  const data = x.sort((a, b) => a - b)
+  const lastNum = data[data.length - 1]
+  const secondLargestNumber = data.findLast((a) => a < lastNum)
+  console.log("secondLargestNumber: ", secondLargestNumber);
+
+
+  //second method
+  const uniqArr = new Set(x) //remove duplicate
+  const sortedArr =  Array.from(uniqArr).sort((a, b) => a - b)
+  const secondLargestNum = sortedArr[sortedArr.length - 2]
+  console.log('secondLargestNum: ', secondLargestNum, typeof secondLargestNum);
+}
+// secondLargestNum(arr)
+
+
+
+//8. rotate array from last nth number
+
+let arr1 = ['1', '2', '3', '4', '5', '6', '7'];
+const oppositeFrom = function (arr1, nth) {
+  const lastNthNum = arr1.splice(arr1.length - nth);
+  console.log('lastNthNum: ', lastNthNum);
+  arr1.unshift(...lastNthNum);
+  console.log(arr1);
+};
+// oppositeFrom(arr1, 2);
