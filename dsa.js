@@ -1,6 +1,6 @@
 /** @format */
 
-//1. isPalandrome
+//1. isPalandrome  --------------------------------------------------------
 
 function isPalandrome(x) {
   return x < 0 ? false : x === Number(x.toString().split("").reverse().join(""))
@@ -8,7 +8,7 @@ function isPalandrome(x) {
 // console.log(isPalandrome(121))
 
 
-//2. Fibonacci Number
+//2. Fibonacci Number  --------------------------------------------------------
 
 const fibArray = [0, 1];
 const numLength = 5;
@@ -23,7 +23,7 @@ const d = FibonacciNumber(numLength);
 // console.log(d);
 
 
-//3. nth Fibonacci number
+//3. nth Fibonacci number  --------------------------------------------------------
 
 const n = 10;
 function fib(n) {
@@ -36,7 +36,7 @@ function fib(n) {
 const data = fib(n);
 // console.log(data);
 
-//3. second method using recursion
+//3. second method using recursion  --------------------------------------------------------
 
 const fib2 = function (n) {
   if (n == undefined) return 0;
@@ -49,7 +49,7 @@ const fib2 = function (n) {
 
 
 
-//4. find uniq number and also repated number
+//4. find uniq number and also repated number  --------------------------------------------------------
 
 const nums = [5, 1, 3, 4, 2, 2, 5, 1]
 let uniqArr = []
@@ -69,7 +69,7 @@ const repetNum = () => {
 repetNum();
 
 
-//5. isOppositeSame
+//5. isOppositeSame  --------------------------------------------------------
 
 const isOpposite = function (a, b){
  return Array(...a).reverse().join("") === b
@@ -86,7 +86,7 @@ const isAnagtam = function (a, b){
 // console.log(isAnagtam("satya", "ysata"))
 
 
-//7. find the second largest number
+//7. find the second largest number  --------------------------------------------------------
 
 const arr = [19, 32,32, 23, 14, 33,33, 5]
 const secondLargestNum = function (x) {
@@ -108,7 +108,7 @@ const secondLargestNum = function (x) {
 
 
 
-//8. rotate array from last nth number
+//8. rotate array from last nth number  --------------------------------------------------------
 
 let arr1 = ['1', '2', '3', '4', '5', '6', '7'];
 const oppositeFrom = function (arr1, nth) {
@@ -118,3 +118,42 @@ const oppositeFrom = function (arr1, nth) {
   console.log(arr1);
 };
 // oppositeFrom(arr1, 2);
+
+
+//9. objects in javascript practice --------------------------------------------------------
+
+const students = [
+  {name: 'neha', age: 44, gender: 'female'},
+  {name: 'satya', age: 20, gender: 'male'},
+  {name: 'shubham', age: 22, gender: 'male'},
+  {name: 'shivam', age: 21, gender: 'male'},
+  {name: 'priyanshi', age: 18, gender: 'female'},
+  {name: 'raginee', age: 28, gender: 'female'},
+  {name: 'saumya', age: 4, gender: 'female'},
+  {name: 'lala', age: 36, gender: 'male'},
+];
+
+//all students whose age is greater than 20
+const greater20Age = students.filter((stu) => stu.age > 20);
+// console.log(greater20Age);
+
+
+// age greater than 20 and accending order
+const ageAccendingOrder = greater20Age.sort((a, b) => a.age > b.age);
+// console.log(ageAccendingOrder)
+
+
+// age greater then 20 and should be male
+const maleStudents = students.filter((stu) => stu.age > 20 && stu.gender === 'male');
+// console.log(maleStudents);
+
+
+//max age student
+const maxAgeStu = students.sort((a,b)=> a.age>b.age)[students.length-1]
+// console.log(maxAgeStu)
+
+
+//max age male student
+const allMale = students.filter((stu)=> stu.gender === 'male') //all male student
+const accendingAge = allMale.sort((a,b)=> a.age > b.age)  // accending age order of all male student
+// console.log(accendingAge[allMale.length -1 ]);
