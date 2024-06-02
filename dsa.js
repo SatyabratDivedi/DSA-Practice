@@ -1,6 +1,6 @@
 /** @format */
 
-//1. isPalandrome  --------------------------------------------------------
+//1. isPalandrome  -------------------------------------------------------------------------
 
 function isPalandrome(x) {
   return x < 0 ? false : x === Number(x.toString().split("").reverse().join(""))
@@ -8,7 +8,7 @@ function isPalandrome(x) {
 // console.log(isPalandrome(121))
 
 
-//2. Fibonacci Number  --------------------------------------------------------
+//2. Fibonacci Number  ---------------------------------------------------------------------
 
 const fibArray = [0, 1];
 const numLength = 5;
@@ -23,7 +23,7 @@ const d = FibonacciNumber(numLength);
 // console.log(d);
 
 
-//3. nth Fibonacci number  --------------------------------------------------------
+//3. nth Fibonacci number  ----------------------------------------------------------------
 
 const n = 10;
 function fib(n) {
@@ -49,7 +49,7 @@ const fib2 = function (n) {
 
 
 
-//4. find uniq number and also repated number  --------------------------------------------------------
+//4. find uniq number and also repated number  ----------------------------------------------
 
 const nums = [5, 1, 3, 4, 2, 2, 5, 1]
 let uniqArr = []
@@ -69,7 +69,7 @@ const repetNum = () => {
 repetNum();
 
 
-//5. isOppositeSame  --------------------------------------------------------
+//5. isOppositeSame  -----------------------------------------------------------------------
 
 const isOpposite = function (a, b){
  return Array(...a).reverse().join("") === b
@@ -86,7 +86,7 @@ const isAnagtam = function (a, b){
 // console.log(isAnagtam("satya", "ysata"))
 
 
-//7. find the second largest number  --------------------------------------------------------
+//7. find the second largest number  -------------------------------------------------------
 
 const arr = [19, 32,32, 23, 14, 33,33, 5]
 const secondLargestNum = function (x) {
@@ -108,7 +108,7 @@ const secondLargestNum = function (x) {
 
 
 
-//8. rotate array from last nth number  --------------------------------------------------------
+//8. rotate array from last nth number  -----------------------------------------------------
 
 let arr1 = ['1', '2', '3', '4', '5', '6', '7'];
 const oppositeFrom = function (arr1, nth) {
@@ -157,3 +157,14 @@ const maxAgeStu = students.sort((a,b)=> a.age>b.age)[students.length-1]
 const allMale = students.filter((stu)=> stu.gender === 'male') //all male student
 const accendingAge = allMale.sort((a,b)=> a.age > b.age)  // accending age order of all male student
 // console.log(accendingAge[allMale.length -1 ]);
+
+
+//10. find the first max length of word on a sentence/---------------------------------------
+
+
+const sentence = 'Lorem ipsum dolor sit amet consecteturg adipisicing elitaiauwe'
+
+const maxLengthWord = sentence.split(' ').map((word)=> word).sort((a,b)=>a.length<b.length)[0]
+// console.log(maxLengthWord, '-', maxLengthWord.length)
+
+
