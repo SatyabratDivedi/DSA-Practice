@@ -163,8 +163,21 @@ const accendingAge = allMale.sort((a,b)=> a.age > b.age)  // accending age order
 
 
 const sentence = 'Lorem ipsum dolor sit amet consecteturg adipisicing elitaiauwe'
+const maxLengthWord = sentence.split(' ').sort((a,b)=>b.length-a.length)[0]
+console.log(maxLengthWord, '-', maxLengthWord.length) 
 
-const maxLengthWord = sentence.split(' ').map((word)=> word).sort((a,b)=>a.length<b.length)[0]
-// console.log(maxLengthWord, '-', maxLengthWord.length)
+//second method
+const senArray = sentence.split(' ');
+const maxLengthWord2 = senArray.reduce((longentWord, curr) => {
+  return longentWord.length < curr.length ? curr : longentWord;
+});
+// console.log(maxLengthWord2);
 
+
+
+//In sentence all words first letter should be capitilize------------------------------------
+
+const st = 'i am satya divedi and i am from india';
+const stArr = st.split(' ').map((word) => word.charAt(0).toUpperCase().concat(word.slice(1)));
+console.log(stArr);
 
