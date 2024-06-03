@@ -178,6 +178,7 @@ const maxLengthWord2 = senArray.reduce((longentWord, curr) => {
 //In sentence all words first letter should be capitilize------------------------------------
 
 const st = 'i am satya divedi and i am from india';
-const stArr = st.split(' ').map((word) => word.charAt(0).toUpperCase().concat(word.slice(1)));
+const stArr = st.split(' ').map((word) => word.charAt(0).toUpperCase().concat(word.slice(1))).join(' ');
 console.log(stArr);
+
 
