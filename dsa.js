@@ -177,8 +177,23 @@ const maxLengthWord2 = senArray.reduce((longentWord, curr) => {
 
 //In sentence all words first letter should be capitilize------------------------------------
 
-const st = 'i am satya divedi and i am from india';
+const st = 'i am satya divedi and i am from india.';
 const stArr = st.split(' ').map((word) => word.charAt(0).toUpperCase().concat(word.slice(1))).join(' ');
 console.log(stArr);
 
+
+
+// count how much time the letter is printed on a word-----------------------------------------------
+
+let word = 'pinnapllan';
+let repetLetter = 'l';
+
+const countRepetLetterInWord = word.split('').reduce((acc, curr) => {
+  if (curr == repetLetter) {
+    acc++;
+  }
+  return acc;
+}, 0);
+
+// console.log(countRepetLetterInWord);
 
