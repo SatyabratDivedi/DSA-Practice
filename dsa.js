@@ -157,7 +157,7 @@ const maxLengthWord2 = senArray.reduce((longentWord, curr) => {
 });
 // console.log(maxLengthWord2);
 
-//In sentence all words first letter should be capitilize------------------------------------
+//11. In sentence all words first letter should be capitilize------------------------------------
 
 const st = 'i am satya divedi and i am from india.';
 const stArr = st
@@ -166,7 +166,7 @@ const stArr = st
   .join(' ');
 // console.log(stArr);
 
-// count how much time the letter is printed on a word-----------------------------------------------
+//12. count how much time the letter is printed on a word-----------------------------------------------
 
 let word = 'pinnapllan';
 let repetLetter = 'l';
@@ -180,21 +180,20 @@ const countRepetLetterInWord = word.split('').reduce((acc, curr) => {
 // console.log(countRepetLetterInWord);
 
 
-//count how much letters in any array and set it in Obj-----------------------------------------------
+//13. count how much letters in any array and set it in Obj-----------------------------------------------
 
 let array = ['f','a', 'b', 'a', 'c', 'b', 'a', 'd', 'b','f'];
 const obj = array.reduce((acc, curr) => {
   if (curr in acc) {
-    console.log(` ${curr} mil gya aur bda diya 1`)
     acc[curr]++;
   } else {
-    console.log(` ${curr} nai mila to dal diya 1 `)
     acc[curr] = 1;
   }
   return acc;
 }, {});
 // console.log(obj);
 
+//second method
 let obj2 = {};
 array.forEach((letter) => {
   if (letter in obj2) {
@@ -204,3 +203,14 @@ array.forEach((letter) => {
   }
 });
 // console.log(obj2);
+
+//9. reverse a string------------------------------------------------------------------------------
+
+function reverseString(str) {
+    let reversedStr = '';
+    for (let i = str.length - 1; i >= 0; i--) {
+      reversedStr += str[i];
+    }
+    return reversedStr;
+}
+// console.log(reverseString('uhelloo'));
