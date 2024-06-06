@@ -204,7 +204,7 @@ array.forEach((letter) => {
 });
 // console.log(obj2);
 
-//9. reverse a string------------------------------------------------------------------------------
+//14. reverse a string------------------------------------------------------------------------------
 
 function reverseString(str) {
     let reversedStr = '';
@@ -214,3 +214,31 @@ function reverseString(str) {
     return reversedStr;
 }
 // console.log(reverseString('uhelloo'));
+
+
+//15. store unique value from an array----------------------------------------------------------------
+
+const arrForUniq = [11, 2, 11, 3, 2, 1, 37, 11, 44, 5, 7, 5, 11]
+//firse mathod
+const uniqueArr = () => {
+  const uni = arrForUniq.filter((num, index, self) => {
+    return self.indexOf(num) === index
+  })
+  console.log(uni)
+}
+// uniqueArr()
+
+//second mathod
+const uniqArray = () => {
+  const uniqArr = [arrForUniq[0]]
+  for (let i = 1; i <= arrForUniq.length - 1; i++) {
+    const isAlready = uniqArr.indexOf(arrForUniq[i])
+    if (isAlready == -1) {
+      uniqArr.push(arrForUniq[i])
+    }
+  }
+  console.log(uniqArr)
+}
+uniqArray()
+
+
