@@ -83,7 +83,7 @@ const isAnagtam = function (a, b) {
 
 //7. find the second largest number  -------------------------------------------------------
 
-const arr = [19, 32, 32, 23, 14, 33, 33, 5];
+var arr = [19, 32, 32, 23, 14, 33, 33, 5];
 const secondLargestNum = function (x) {
   //first method
   const data = x.sort((a, b) => a - b);
@@ -242,3 +242,13 @@ const uniqArray = () => {
 uniqArray()
 
 
+//16. isAnyNumRepeted--------------------------------------------------------------------------------------
+
+var arr = [1, 2, 2, 1, 1, 3] //=> true
+var arr2 = [1, 2, 1] //=> true
+var arr3 = [1, 2, 3,4,5] //=> false
+
+var isRepetedLetter = function (recArr) {
+  return [...new Set(recArr)].length !== recArr.length
+}
+console.log(isRepetedLetter(arr3))
