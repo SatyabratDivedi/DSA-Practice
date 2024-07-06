@@ -254,12 +254,9 @@ console.log(isRepetedLetter(arr3));
 
 // 1. Logic-1 > cigarParty----------------------------------------------------------------------------------
 
-/*When squirrels get together for a party, they like to have cigars.
- A squirrel party is successful when the number of 
- cigars is between 40 and 60, inclusive. Unless it is the weekend,
-  in which case there is no upper bound on the number of cigars. 
-  Return true if the party with the given values is successful, 
-  or false otherwise*/
+/*When squirrels get together for a party, they like to have cigars.A squirrel party is successful when the number of 
+ cigars is between 40 and 60, inclusive. Unless it is the weekend,in which case there is no upper bound on the number of cigars. 
+Return true if the party with the given values is successful, or false otherwise*/
 
 // cigarParty(30, false) → false
 // cigarParty(50, false); → true
@@ -285,13 +282,10 @@ console.log(cigarParty(30, true));
 // 2. Logic-1 > dateFashion----------------------------------------------------------------------------------
 
 /*
-You and your date are trying to get a table at a restaurant.
- The parameter "you" is the stylishness of your clothes,
-  in the range 0..10, and "date" is the stylishness of your date's clothes.
-   The result getting the table is encoded as an int value with 0=no, 
-   1=maybe, 2=yes. If either of you is very stylish, 8 or more, then the 
-   result is 2 (yes). With the exception that if either of you has style of 
-   2 or less, then the result is 0 (no). Otherwise the result is 1 (maybe).
+You and your date are trying to get a table at a restaurant.The parameter "you" is the stylishness of your clothes,
+in the range 0..10, and "date" is the stylishness of your date's clothes.The result getting the table is encoded as an int value with 0=no, 
+1=maybe, 2=yes. If either of you is very stylish, 8 or more, then the result is 2 (yes). With the exception that if either of you has style of 
+2 or less, then the result is 0 (no). Otherwise the result is 1 (maybe).
 */
 // dateFashion(5, 10) → 2
 // dateFashion(5, 2) → 0
@@ -318,10 +312,8 @@ console.log(dateFashion(2, 9));
 // 3. Logic-1 > squirrelPlay----------------------------------------------------------------------------------
 
 /*
-The squirrels in Palo Alto spend most of the day playing. 
-In particular, they play if the temperature is between 60 and 90 (inclusive). 
-Unless it is summer, then the upper limit is 100 instead of 90. 
-Given an int temperature and a boolean isSummer, 
+The squirrels in Palo Alto spend most of the day playing. In particular, they play if the temperature is between 60 and 90 (inclusive). 
+Unless it is summer, then the upper limit is 100 instead of 90. Given an int temperature and a boolean isSummer, 
 return true if the squirrels play and false otherwise.
 */
 
@@ -346,8 +338,8 @@ console.log(squirrelPlay(95, true));
 // 4. Logic-1 > sortaSum----------------------------------------------------------------------------------
 
 /*
-Given 2 ints, a and b, return their sum. 
-However, sums in the range 10..19 inclusive, are forbidden, so in that case just return 20.
+Given 2 ints, a and b, return their sum. However, sums in the range 10..19 inclusive,
+are forbidden, so in that case justreturn 20.
 */
 
 // sortaSum(3, 4) → 7
@@ -369,15 +361,10 @@ console.log(sortaSum(10, 11));
 
 // 5. Logic-1 > alarmClock----------------------------------------------------------------------------------
 
-
 /*
-
-Given a day of the week encoded as 0=Sun, 1=Mon, 2=Tue, ...6=Sat, 
-and a boolean indicating if we are on vacation, 
-return a string of the form "7:00" indicating when the alarm clock 
-should ring. Weekdays, the alarm should be "7:00" 
-and on the weekend it should be "10:00". 
-Unless we are on vacation -- then on weekdays it should be 
+Given a day of the week encoded as 0=Sun, 1=Mon, 2=Tue, ...6=Sat, and a boolean indicating if we are on vacation, 
+return a string of the form "7:00" indicating when the alarm clock should ring. Weekdays, the alarm should be "7:00" 
+and on the weekend it should be "10:00". Unless we are on vacation -- then on weekdays it should be 
 "10:00" and weekends it should be "off".
 */
 
@@ -398,3 +385,27 @@ console.log(alarmClock(1, false));
 console.log(alarmClock(5, false));
 console.log(alarmClock(0, false));
 console.log(alarmClock(0, true));
+
+
+// 6. Logic-1 > love6----------------------------------------------------------------------------------
+
+/*
+The number 6 is a truly great number. Given two int values, a and b, return true if either one is 6. 
+Or if their sum or difference is 6. Note: the function Math.abs(num) computes the absolute value of a number.
+*/
+
+// love6(6, 4) → true
+// love6(4, 5) → false
+// love6(1, 5) → true
+
+function love6(a, b) {
+  if (a == 6 || b == 6 || Math.abs(a - b) == 6 || a + b == 6) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+console.log(love6(6, 4));
+console.log(love6(4, 5));
+console.log(love6(1, 5));
