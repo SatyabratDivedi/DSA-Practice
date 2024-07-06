@@ -516,3 +516,23 @@ console.log(less20(20));
 console.log(less20(38));
 console.log(less20(39));
 console.log(less20(40));
+
+
+// 10. Logic-1 > nearTen----------------------------------------------------------------------------------
+
+/*
+Given a non-negative number "num", return true if num is within 2 of a multiple of 10.
+Note: (a % b) is the remainder of dividing a by b, so (7 % 5) is 2.
+*/
+
+// nearTen(12) → true
+// nearTen(17) → false
+// nearTen(19) → true
+
+function nearTen(num) {
+  return num % 10 == 0 || (num + 1) % 10 == 0 || (num + 2) % 10 == 0 || (num - 1) % 10 == 0 || (num - 2) % 10 == 0;
+}
+
+console.log(nearTen(12));
+console.log(nearTen(17));
+console.log(nearTen(19));
