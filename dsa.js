@@ -358,7 +358,6 @@ console.log(sortaSum(3, 4));
 console.log(sortaSum(9, 4));
 console.log(sortaSum(10, 11));
 
-
 // 5. Logic-1 > alarmClock----------------------------------------------------------------------------------
 
 /*
@@ -386,7 +385,6 @@ console.log(alarmClock(5, false));
 console.log(alarmClock(0, false));
 console.log(alarmClock(0, true));
 
-
 // 6. Logic-1 > love6----------------------------------------------------------------------------------
 
 /*
@@ -410,7 +408,6 @@ console.log(love6(6, 4));
 console.log(love6(4, 5));
 console.log(love6(1, 5));
 
-
 // 7. Logic-1 > in1To10----------------------------------------------------------------------------------
 
 /*
@@ -431,9 +428,9 @@ function in1To10(n, outsideMode) {
   }
 }
 
-console.log(in1To10(5, false))
-console.log(in1To10(11, false))
-console.log(in1To10(11, true))
+console.log(in1To10(5, false));
+console.log(in1To10(11, false));
+console.log(in1To10(11, true));
 
 // 8. Logic-1 > specialEleven----------------------------------------------------------------------------------
 
@@ -465,12 +462,12 @@ Return true if the given non-negative number is 1 or 2 more than a multiple of 2
 // more20(22) → true
 
 function more20(n) {
-  return n%20 == 1 || n%20 ==2;
+  return n % 20 == 1 || n % 20 == 2;
 }
 
-console.log(more20(20))
-console.log(more20(21))
-console.log(more20(22))
+console.log(more20(20));
+console.log(more20(21));
+console.log(more20(22));
 
 // 10. Logic-1 > old35----------------------------------------------------------------------------------
 
@@ -490,7 +487,6 @@ function old35(n) {
 console.log(old35(3));
 console.log(old35(10));
 console.log(old35(15));
-
 
 // 10. Logic-1 > less20----------------------------------------------------------------------------------
 
@@ -517,7 +513,6 @@ console.log(less20(38));
 console.log(less20(39));
 console.log(less20(40));
 
-
 // 11. Logic-1 > nearTen----------------------------------------------------------------------------------
 
 /*
@@ -536,7 +531,6 @@ function nearTen(num) {
 console.log(nearTen(12));
 console.log(nearTen(17));
 console.log(nearTen(19));
-
 
 // 12. Logic-2 > makeBricks----------------------------------------------------------------------------------
 
@@ -566,3 +560,35 @@ console.log(makeBricks(3, 2, 10));
 console.log(makeBricks(7, 1, 11));
 console.log(makeBricks(3, 2, 8));
 console.log(makeBricks(1, 4, 11));
+
+// 13. Logic-2 > loneSum----------------------------------------------------------------------------------
+
+/*
+Given 3 int values, a b c, return their sum. However, 
+if one of the values is the same as another of the values, 
+it does not count towards the sum.
+*/
+// loneSum(1, 2, 3) → 6
+// loneSum(3, 2, 3) → 2
+// loneSum(3, 3, 3) → 0
+
+function loneSum(a, b, c) {
+  if (a == b && b == c) {
+    return 0;
+  }
+  if (a == b) {
+    return c;
+  }
+  if (b == c) {
+    return a;
+  }
+  if (a == c) {
+    return b;
+  } else {
+    return a + b + c;
+  }
+}
+
+console.log(loneSum(1, 2, 3));
+console.log(loneSum(3, 2, 3));
+console.log(loneSum(3, 3, 3));
