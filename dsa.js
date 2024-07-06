@@ -490,3 +490,29 @@ function old35(n) {
 console.log(old35(3));
 console.log(old35(10));
 console.log(old35(15));
+
+
+// 10. Logic-1 > less20----------------------------------------------------------------------------------
+
+/*
+Return true if the given non-negative number is 1 or 2 less than a multiple of 20. 
+So for example 38 and 39 return true, but 40 returns false.
+*/
+
+// less20(18) → true
+// less20(19) → true
+// less20(20) → false
+
+function less20(n) {
+  if (n % 20 == 0) {
+    return false;
+  }
+  return (n + 1) % 20 == 0 || (n + 2) % 20 == 0;
+}
+
+console.log(less20(18));
+console.log(less20(19));
+console.log(less20(20));
+console.log(less20(38));
+console.log(less20(39));
+console.log(less20(40));
