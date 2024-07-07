@@ -791,3 +791,26 @@ function extraEnd(str) {
 console.log(extraEnd("Hello"));
 console.log(extraEnd("ab"));
 console.log(extraEnd("Hi"));
+
+
+// 22. String-2 > doubleChar---------------------------------------------------------------------------------
+
+/*
+Given a string, return a string where for every char in the original, there are two chars.*/
+
+// doubleChar("The") → "TThhee"
+// doubleChar("AAbb") → "AAAAbbbb"
+// doubleChar("Hi-There") → "HHii--TThheerree"
+
+function doubleChar(str) {
+  let newWord = [];
+  for (let i = 0; i <= str.length - 1; i++) {
+    newWord.push(str[i]);
+    newWord.push(str[i]);
+  }
+  return newWord.join("");
+}
+
+console.log(doubleChar("The"));
+console.log(doubleChar("AAbb"));
+console.log(doubleChar("Hi-There"));
