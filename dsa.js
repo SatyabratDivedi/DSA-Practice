@@ -592,3 +592,69 @@ function loneSum(a, b, c) {
 console.log(loneSum(1, 2, 3));
 console.log(loneSum(3, 2, 3));
 console.log(loneSum(3, 3, 3));
+
+// 14. Logic-2 > luckySum----------------------------------------------------------------------------------
+
+/*
+Given 3 int values, a b c, return their sum. However, if one of the values is 13 then it does not count towards the 
+sum and values to its right do not count. So for example, if b is 13, then both b and c do not count.
+*/
+// luckySum(1, 2, 3) → 6
+// luckySum(1, 2, 13) → 3
+// luckySum(1, 13, 3) → 1
+
+function luckySum(a, b, c) {
+  if (a != 13 && b != 13 && c != 13) {
+    return a + b + c;
+  } else {
+    if (a == 13) {
+      return 0;
+    }
+    if (b == 13) {
+      return a;
+    } else {
+      return a + b;
+    }
+  }
+}
+
+console.log(luckySum(1, 2, 3));
+console.log(luckySum(1, 2, 13));
+console.log(luckySum(1, 13, 3));
+
+// 15. Logic-2 > noTeenSum----------------------------------------------------------------------------------
+
+/*
+Given 3 int values, a b c, return their sum. However, if any of the values is a teen -- in the range 13..19 inclusive -- 
+then that value counts as 0, except 15 and 16 do not count as a teens. Write a separate helper "public int fixTeen(int n) 
+{"that takes in an int value and returns that value fixed for the teen rule. In this way, you avoid repeating the teen code 3 times (i.e. "decomposition").
+*/
+
+// noTeenSum(1, 2, 3) → 6
+// noTeenSum(2, 13, 1) → 3
+// noTeenSum(2, 1, 14) → 3
+// noTeenSum(2, 1, 15) → 18
+
+function noTeenSum(a, b, c) {
+  if (a >= 13 && a <= 19) {
+    if (a != 15 && a != 16) {
+      a = 0;
+    }
+  }
+  if (b >= 13 && b <= 19) {
+    if (b != 15 && b != 16) {
+      b = 0;
+    }
+  }
+  if (c >= 13 && c <= 19) {
+    if (c != 15 && c != 16) {
+      c = 0;
+    }
+  }
+  return a + b + c;
+}
+
+console.log(noTeenSum(1, 2, 3));
+console.log(noTeenSum(2, 13, 1));
+console.log(noTeenSum(2, 1, 14));
+console.log(noTeenSum(2, 1, 15));
