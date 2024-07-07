@@ -658,3 +658,32 @@ console.log(noTeenSum(1, 2, 3));
 console.log(noTeenSum(2, 13, 1));
 console.log(noTeenSum(2, 1, 14));
 console.log(noTeenSum(2, 1, 15));
+
+
+// 16. Logic-2 > roundSum----------------------------------------------------------------------------------
+
+
+/*
+For this problem, we'll round an int value up to the next multiple of 10 if its rightmost digit is 5 or more, so 15 rounds up to 20. Alternately, round down to the previous multiple of 10 if 
+its rightmost digit is less than 5, so 12 rounds down to 10. Given 3 ints, a b c, return the sum of their rounded values. To avoid code repetition, write a separate helper "public int 
+round10(int num) {" and call it 3 times. Write the helper entirely below and at the same indent level as roundSum().
+*/
+
+// roundSum(16, 17, 18) → 60
+// roundSum(12, 13, 14) → 30
+// roundSum(6, 4, 4) → 10
+// roundSum(6, 4, 4) → 10
+// roundSum(4, 6, 5) → 20
+
+function roundSum(a, b, c) {
+  a = Math.round(a / 10) * 10;
+  b = Math.round(b / 10) * 10;
+  c = Math.round(c / 10) * 10;
+  return a + b + c;
+}
+
+console.log(roundSum(15, 17, 18));
+console.log(roundSum(12, 13, 14));
+console.log(roundSum(6, 4, 4));
+console.log(roundSum(6, 4, 4));
+console.log(roundSum(4, 6, 5));
