@@ -687,3 +687,23 @@ console.log(roundSum(12, 13, 14));
 console.log(roundSum(6, 4, 4));
 console.log(roundSum(6, 4, 4));
 console.log(roundSum(4, 6, 5));
+
+
+// 17. String-1 > helloName---------------------------------------------------------------------------------
+
+/*
+Given a string name, e.g. "Bob", return a greeting of the form "Hello Bob!".
+*/
+
+// helloName("Bob") → "Hello Bob!"
+// helloName("Alice") → "Hello Alice!"
+// helloName("X") → "Hello X!"
+
+
+function helloName(name) {
+  return `Hello ${name}!`
+}
+
+console.log(helloName("Bob"))
+console.log(helloName("Alice"))
+console.log(helloName("X"))
