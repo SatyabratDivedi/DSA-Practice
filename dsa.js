@@ -746,3 +746,25 @@ function  makeTags(tag, word) {
 console.log(makeTags("i", "Yay"))
 console.log(makeTags("i", "Hello"))
 console.log(makeTags("cite", "Yay"))
+
+
+// 20. String-1 > makeOutWord---------------------------------------------------------------------------------
+
+/*
+Given an "out" string length 4, such as "<<>>", and a word, return a new string where the word is in the middle of the out string, e.g. 
+"<<word>>". Note: use str.substring(i, j) to extract the String starting at index i and going up to but not including index j.
+*/
+
+// makeOutWord("<<>>", "Yay") → "<<Yay>>"
+// makeOutWord("<<>>", "WooHoo") → "<<WooHoo>>"
+// makeOutWord("[[]]", "word") → "[[word]]"
+
+function makeOutWord(out, word) {
+  let newWord = out.split("");
+  newWord.splice(2, 0, word);
+  return newWord.join("");
+}
+
+console.log(makeOutWord("<<>>", "Yay"));
+console.log(makeOutWord("<<>>", "WooHoo"))
+console.log(makeOutWord("[[]]", "word"))
