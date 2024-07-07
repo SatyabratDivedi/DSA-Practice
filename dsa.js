@@ -768,3 +768,26 @@ function makeOutWord(out, word) {
 console.log(makeOutWord("<<>>", "Yay"));
 console.log(makeOutWord("<<>>", "WooHoo"))
 console.log(makeOutWord("[[]]", "word"))
+
+
+// 21. String-1 > extraEnd---------------------------------------------------------------------------------
+
+/*
+Given a string, return a new string made of 3 copies of the last 2 chars of the original string. The string length will be at least 2.
+*/
+
+// extraEnd("Hello") → "lololo"
+// extraEnd("ab") → "ababab"
+// extraEnd("Hi") → "HiHiHi"
+
+function extraEnd(str) {
+  if (str.length < 2) {
+    return "";
+  }
+  const newStr = str.substring(str.length - 2);
+  return newStr + newStr + newStr;
+}
+
+console.log(extraEnd("Hello"));
+console.log(extraEnd("ab"));
+console.log(extraEnd("Hi"));
