@@ -689,7 +689,7 @@ console.log(roundSum(6, 4, 4));
 console.log(roundSum(4, 6, 5));
 
 
-// 17. String-1 > helloName---------------------------------------------------------------------------------
+// 17. String-1 > makeAbba---------------------------------------------------------------------------------
 
 /*
 Given a string name, e.g. "Bob", return a greeting of the form "Hello Bob!".
@@ -707,3 +707,23 @@ function helloName(name) {
 console.log(helloName("Bob"))
 console.log(helloName("Alice"))
 console.log(helloName("X"))
+
+
+// 18. String-1 > makeAbba---------------------------------------------------------------------------------
+
+/*
+Given two strings, a and b, return the result ofputting them together in the order abba, 
+e.g. "Hi" and "Bye" returns "HiByeByeHi".*/
+
+// makeAbba("Hi", "Bye") → "HiByeByeHi"
+// makeAbba("Yo", "Alice") → "YoAliceAliceYo"
+// makeAbba("What", "Up") → "WhatUpUpWhat"
+
+
+function makeAbba(a, b) {
+  return a + b + b + a
+}
+
+console.log(makeAbba("Hi", "Bye"))
+console.log(makeAbba("Yo", "Alice"))
+console.log(makeAbba("What", "Up"))
