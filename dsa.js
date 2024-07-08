@@ -989,3 +989,29 @@ function rotateLeft3(nums) {
 console.log(rotateLeft3([1, 2, 3]));
 console.log(rotateLeft3([5, 11, 9]));
 console.log(rotateLeft3([7, 0, 0]));
+
+
+
+// 31. Array-2 > countEvens---------------------------------------------------------------------------------
+
+/*
+Return the number of even ints in the given array.
+*/
+
+// countEvens([2, 1, 2, 3, 4]) → 3
+// countEvens([2, 2, 0]) → 3
+// countEvens([1, 3, 5]) → 0
+
+function countEvens(nums) {
+  count = 0;
+  for (let i = 0; i <= nums.length - 1; i++) {
+    if (nums[i] % 2 == 0) {
+      count++;
+    }
+  }
+  return count;
+}
+
+console.log(countEvens([2, 1, 2, 3, 4]));
+console.log(countEvens([2, 2, 0]));
+console.log(countEvens([1, 3, 5]));
