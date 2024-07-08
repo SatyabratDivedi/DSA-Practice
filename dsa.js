@@ -964,3 +964,28 @@ console.log(commonEnd([1, 2, 3], [7, 3]));
 console.log(commonEnd([1, 2, 3], [7, 3, 2]));
 console.log(commonEnd([1, 2, 3], [1, 3]));
 console.log(commonEnd([3], [1, 3]));
+
+
+// 30. Array-1 > rotateLeft3---------------------------------------------------------------------------------
+
+/*
+Given an array of ints length 3, return an array with the elements "rotated left" so {1, 2, 3} yields {2, 3, 1}.
+*/
+
+// rotateLeft3([1, 2, 3]) → [2, 3, 1]
+// rotateLeft3([5, 11, 9]) → [11, 9, 5]
+// rotateLeft3([7, 0, 0]) → [0, 0, 7]
+
+function rotateLeft3(nums) {
+  const newArr = [];
+  for (let i = 0; i <= nums.length - 2; i++) {
+    newArr.push(nums[i + 1]);
+  }
+  newArr.push(nums[0]);
+
+  return newArr;
+}
+
+console.log(rotateLeft3([1, 2, 3]));
+console.log(rotateLeft3([5, 11, 9]));
+console.log(rotateLeft3([7, 0, 0]));
