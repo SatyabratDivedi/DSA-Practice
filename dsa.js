@@ -910,3 +910,27 @@ function xyzThere(str) {
 console.log(xyzThere("abcxyz"));
 console.log(xyzThere("abc.xyz"));
 console.log(xyzThere("xyz.abc"));
+
+// 26. String-2 > mixString---------------------------------------------------------------------------------
+
+/*
+Given two strings, a and b, create a bigger string made of the first char of a, the first char of b, the second char of a, 
+the second char of b, and so on. Any leftover chars go at the end of the result.
+*/
+
+// mixString("abc", "xyz") → "axbycz"
+// mixString("Hi", "There") → "HTihere"
+// mixString("xxxx", "There") → "xTxhxexre"
+
+function mixString(a, b) {
+  let newWord = [];
+  for (let i = 0; i < a.length + 1; i++) {
+    newWord.push(a[i]);
+    newWord.push(b[i]);
+  }
+  return newWord.join("");
+}
+
+console.log(mixString("abc", "xyz"));
+console.log(mixString("Hi", "There"));
+console.log(mixString("xxxx", "There"));
