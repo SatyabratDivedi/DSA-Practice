@@ -939,3 +939,28 @@ function firstLast6(nums) {
 console.log(firstLast6([1, 2, 6]));
 console.log(firstLast6([6, 1, 2, 3]));
 console.log(firstLast6([13, 6, 1, 2, 3]));
+
+
+// 29. Array-1 > commonEnd---------------------------------------------------------------------------------
+
+/*
+
+Given 2 arrays of ints, a and b, return true if they have the same first element or 
+they have the same last element. Both arrays will be length 1 or more.
+*/
+
+// commonEnd([1, 2, 3], [7, 3]) → true
+// commonEnd([1, 2, 3], [7, 3, 2]) → false
+// commonEnd([1, 2, 3], [1, 3]) → true
+
+function commonEnd(a, b) {
+  if (a.length == 0 || b.length == 0) {
+    return false;
+  }
+  return a[0] == b[0] || a[a.length - 1] == b[b.length - 1];
+}
+
+console.log(commonEnd([1, 2, 3], [7, 3]));
+console.log(commonEnd([1, 2, 3], [7, 3, 2]));
+console.log(commonEnd([1, 2, 3], [1, 3]));
+console.log(commonEnd([3], [1, 3]));
