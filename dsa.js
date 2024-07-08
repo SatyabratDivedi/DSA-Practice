@@ -887,3 +887,26 @@ function endOther(a, b) {
 console.log(endOther("Hiabc", "abc"));
 console.log(endOther("AbC", "HiaBc"));
 console.log(endOther("abc", "abXabc"));
+
+
+// 26. String-2 > xyzThere---------------------------------------------------------------------------------
+
+/*
+Return true if the given string contains an appearance of "xyz" where the xyz is not directly preceeded by a period (.).
+So "xxyz" counts but "x.xyz" does not.
+*/
+// xyzThere("abcxyz") → true
+// xyzThere("abc.xyz") → false
+// xyzThere("xyz.abc") → true
+
+function xyzThere(str) {
+  if (!str.includes(".")) {
+    return str.includes("xyz");
+  } else {
+    return str.slice(0, str.indexOf(".")).includes("xyz");
+  }
+}
+
+console.log(xyzThere("abcxyz"));
+console.log(xyzThere("abc.xyz"));
+console.log(xyzThere("xyz.abc"));
