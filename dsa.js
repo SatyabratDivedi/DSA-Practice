@@ -659,9 +659,7 @@ console.log(noTeenSum(2, 13, 1));
 console.log(noTeenSum(2, 1, 14));
 console.log(noTeenSum(2, 1, 15));
 
-
 // 16. Logic-2 > roundSum----------------------------------------------------------------------------------
-
 
 /*
 For this problem, we'll round an int value up to the next multiple of 10 if its rightmost digit is 5 or more, so 15 rounds up to 20. Alternately, round down to the previous multiple of 10 if 
@@ -688,7 +686,6 @@ console.log(roundSum(6, 4, 4));
 console.log(roundSum(6, 4, 4));
 console.log(roundSum(4, 6, 5));
 
-
 // 17. String-1 > makeAbba---------------------------------------------------------------------------------
 
 /*
@@ -699,15 +696,13 @@ Given a string name, e.g. "Bob", return a greeting of the form "Hello Bob!".
 // helloName("Alice") → "Hello Alice!"
 // helloName("X") → "Hello X!"
 
-
 function helloName(name) {
-  return `Hello ${name}!`
+  return `Hello ${name}!`;
 }
 
-console.log(helloName("Bob"))
-console.log(helloName("Alice"))
-console.log(helloName("X"))
-
+console.log(helloName("Bob"));
+console.log(helloName("Alice"));
+console.log(helloName("X"));
 
 // 18. String-1 > makeAbba---------------------------------------------------------------------------------
 
@@ -719,14 +714,13 @@ e.g. "Hi" and "Bye" returns "HiByeByeHi".*/
 // makeAbba("Yo", "Alice") → "YoAliceAliceYo"
 // makeAbba("What", "Up") → "WhatUpUpWhat"
 
-
 function makeAbba(a, b) {
-  return a + b + b + a
+  return a + b + b + a;
 }
 
-console.log(makeAbba("Hi", "Bye"))
-console.log(makeAbba("Yo", "Alice"))
-console.log(makeAbba("What", "Up"))
+console.log(makeAbba("Hi", "Bye"));
+console.log(makeAbba("Yo", "Alice"));
+console.log(makeAbba("What", "Up"));
 
 // 19. String-1 > makeTags---------------------------------------------------------------------------------
 /*
@@ -738,15 +732,13 @@ Given tag and word strings, create the HTML string with tags around the word, e.
 // makeTags("i", "Hello") → "<i>Hello</i>"
 // makeTags("cite", "Yay") → "<cite>Yay</cite>"
 
-
-function  makeTags(tag, word) {
+function makeTags(tag, word) {
   return `<${tag}>${word}</${tag}>`;
 }
 
-console.log(makeTags("i", "Yay"))
-console.log(makeTags("i", "Hello"))
-console.log(makeTags("cite", "Yay"))
-
+console.log(makeTags("i", "Yay"));
+console.log(makeTags("i", "Hello"));
+console.log(makeTags("cite", "Yay"));
 
 // 20. String-1 > makeOutWord---------------------------------------------------------------------------------
 
@@ -766,9 +758,8 @@ function makeOutWord(out, word) {
 }
 
 console.log(makeOutWord("<<>>", "Yay"));
-console.log(makeOutWord("<<>>", "WooHoo"))
-console.log(makeOutWord("[[]]", "word"))
-
+console.log(makeOutWord("<<>>", "WooHoo"));
+console.log(makeOutWord("[[]]", "word"));
 
 // 21. String-1 > extraEnd---------------------------------------------------------------------------------
 
@@ -792,7 +783,6 @@ console.log(extraEnd("Hello"));
 console.log(extraEnd("ab"));
 console.log(extraEnd("Hi"));
 
-
 // 22. String-2 > doubleChar---------------------------------------------------------------------------------
 
 /*
@@ -814,7 +804,6 @@ function doubleChar(str) {
 console.log(doubleChar("The"));
 console.log(doubleChar("AAbb"));
 console.log(doubleChar("Hi-There"));
-
 
 // 23. String-2 > countHi---------------------------------------------------------------------------------
 
@@ -839,7 +828,6 @@ function countHi(str) {
 console.log(countHi("abc hi ho"));
 console.log(countHi("ABChi hi"));
 console.log(countHi("hihi"));
-
 
 // 24. String-2 > countCode---------------------------------------------------------------------------------
 
@@ -866,9 +854,7 @@ console.log(countCode("aaacodebbb"));
 console.log(countCode("codexxcode"));
 console.log(countCode("cozexxcope"));
 
-
 // 25. String-2 > endOther---------------------------------------------------------------------------------
-
 
 /*
 Given two strings, return true if either of the strings appears at the very end of the other string, ignoring upper/lower case 
@@ -887,7 +873,6 @@ function endOther(a, b) {
 console.log(endOther("Hiabc", "abc"));
 console.log(endOther("AbC", "HiaBc"));
 console.log(endOther("abc", "abXabc"));
-
 
 // 26. String-2 > xyzThere---------------------------------------------------------------------------------
 
@@ -911,7 +896,7 @@ console.log(xyzThere("abcxyz"));
 console.log(xyzThere("abc.xyz"));
 console.log(xyzThere("xyz.abc"));
 
-// 26. String-2 > mixString---------------------------------------------------------------------------------
+// 27. String-2 > mixString---------------------------------------------------------------------------------
 
 /*
 Given two strings, a and b, create a bigger string made of the first char of a, the first char of b, the second char of a, 
@@ -934,3 +919,23 @@ function mixString(a, b) {
 console.log(mixString("abc", "xyz"));
 console.log(mixString("Hi", "There"));
 console.log(mixString("xxxx", "There"));
+
+
+// 28. Array-1 > firstLast6---------------------------------------------------------------------------------
+
+/*
+Given an array of ints, return true if 6 appears as either the first or last element 
+in the array. The array will be length 1 or more.
+*/
+
+// firstLast6([1, 2, 6]) → true
+// firstLast6([6, 1, 2, 3]) → true
+// firstLast6([13, 6, 1, 2, 3]) → false
+
+function firstLast6(nums) {
+  return nums[0] === 6 || nums[nums.length - 1] === 6;
+}
+
+console.log(firstLast6([1, 2, 6]));
+console.log(firstLast6([6, 1, 2, 3]));
+console.log(firstLast6([13, 6, 1, 2, 3]));
