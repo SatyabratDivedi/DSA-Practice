@@ -1078,3 +1078,27 @@ console.log(sum67([1, 2, 2]));
 console.log(sum67([6, 3, 5, 7]));
 console.log(sum67([1, 2, 2, 6, 99, 99, 7]));
 console.log(sum67([1, 1, 6, 7, 2]));
+
+
+// 34. Array-2 > has22---------------------------------------------------------------------------------
+
+/*
+Given an array of ints, return true if the array contains a 2 next to a 2 somewhere.
+*/
+
+// has22([1, 2, 2]) → true
+// has22([1, 2, 1, 2]) → false
+// has22([2, 1, 2]) → false
+
+function has22(nums) {
+  for (let i = 0; i <= nums.length; i++) {
+    if (nums[i] == 2 && nums[i + 1] == 2) {
+      return true;
+    }
+  }
+  return false;
+}
+
+console.log(has22([1, 2, 2]));
+console.log(has22([1, 2, 1, 2]));
+console.log(has22([2, 1, 2]));
