@@ -998,7 +998,7 @@ Return the number of even ints in the given array.
 // countEvens([1, 3, 5]) → 0
 
 function countEvens(nums) {
-  count = 0;
+  let count = 0;
   for (let i = 0; i <= nums.length - 1; i++) {
     if (nums[i] % 2 == 0) {
       count++;
@@ -1039,3 +1039,42 @@ function sum13(nums) {
 console.log(sum13([1, 2, 2, 1]));
 console.log(sum13([1, 1]));
 console.log(sum13([1, 2, 2, 1, 13]));
+
+
+// 33. Array-2 > sum67---------------------------------------------------------------------------------
+
+
+/*
+Return the sum of the numbers in the array, except ignore sections of numbers starting with a 6 and extending to the next 7 
+(every 6 will be followed by at least one 7). Return 0 for no numbers.
+*/
+
+// sum67([1, 2, 2]) → 5
+// sum67([1, 2, 2, 6, 99, 99, 7]) → 5
+// sum67([1, 1, 6, 7, 2]) → 4
+
+function sum67(nums) {
+  if (nums.length == 0) {
+    return 0;
+  }
+  let find6Index = nums.indexOf(6);
+  let find7Index = nums.indexOf(7);
+  if (find6Index != -1) {
+    if (find7Index != -1) {
+      nums.splice(find6Index, find7Index - find6Index + 1);
+      if (find7Index > find6Index) {
+        let sum = 0;
+        for (let i = 0; i <= nums.length - 1; i++) {
+          sum += nums[i];
+        } 
+        return sum;
+      }
+    }
+  }
+  return nums.reduce((a, b) => a + b, 0);
+}
+
+console.log(sum67([1, 2, 2]));
+console.log(sum67([6, 3, 5, 7]));
+console.log(sum67([1, 2, 2, 6, 99, 99, 7]));
+console.log(sum67([1, 1, 6, 7, 2]));
