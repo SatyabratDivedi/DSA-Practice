@@ -1065,6 +1065,7 @@ function sum67(nums) {
       if (find7Index > find6Index) {
         let sum = 0;
         for (let i = 0; i <= nums.length - 1; i++) {
+          console.log('this is the number: ', nums[i]);
           sum += nums[i];
         } 
         return sum;
@@ -1102,3 +1103,34 @@ function has22(nums) {
 console.log(has22([1, 2, 2]));
 console.log(has22([1, 2, 1, 2]));
 console.log(has22([2, 1, 2]));
+
+
+// 35. Array-2 > countYZ---------------------------------------------------------------------------------
+
+/*
+Given a string, count the number of words ending in 'y' or 'z' -- so the 'y' in "heavy" and the 'z' in "fez" count, but not the 'y' in "yellow" (not case sensitive). We'll say that a y or z is at the end of a word if there is not an alphabetic letter immediately following it. (Note: Character.isLetter(char) tests if a char is an alphabetic letter.)
+*/
+
+// countYZ("fez day") → 2
+// countYZ("day fez") → 2
+// countYZ("day fyyyz") → 2
+
+function countYZ(str) {
+  str = str.toLowerCase();
+  let strArr = str.split(" ");
+  let countNum = 0;
+  for (let i = 0; i < strArr.length; i++) {
+    let word = strArr[i];
+    if (word.length > 0) {
+      let lastChar = word.charAt(word.length - 1);
+      if (lastChar === "y" || lastChar === "z") {
+        countNum++;
+      }
+    }
+  }
+  return countNum;
+}
+
+console.log(countYZ("fez day"));
+console.log(countYZ("day fez"));
+console.log(countYZ("day fyyyz"));
