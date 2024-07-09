@@ -920,7 +920,6 @@ console.log(mixString("abc", "xyz"));
 console.log(mixString("Hi", "There"));
 console.log(mixString("xxxx", "There"));
 
-
 // 28. Array-1 > firstLast6---------------------------------------------------------------------------------
 
 /*
@@ -939,7 +938,6 @@ function firstLast6(nums) {
 console.log(firstLast6([1, 2, 6]));
 console.log(firstLast6([6, 1, 2, 3]));
 console.log(firstLast6([13, 6, 1, 2, 3]));
-
 
 // 29. Array-1 > commonEnd---------------------------------------------------------------------------------
 
@@ -965,7 +963,6 @@ console.log(commonEnd([1, 2, 3], [7, 3, 2]));
 console.log(commonEnd([1, 2, 3], [1, 3]));
 console.log(commonEnd([3], [1, 3]));
 
-
 // 30. Array-1 > rotateLeft3---------------------------------------------------------------------------------
 
 /*
@@ -990,8 +987,6 @@ console.log(rotateLeft3([1, 2, 3]));
 console.log(rotateLeft3([5, 11, 9]));
 console.log(rotateLeft3([7, 0, 0]));
 
-
-
 // 31. Array-2 > countEvens---------------------------------------------------------------------------------
 
 /*
@@ -1015,3 +1010,32 @@ function countEvens(nums) {
 console.log(countEvens([2, 1, 2, 3, 4]));
 console.log(countEvens([2, 2, 0]));
 console.log(countEvens([1, 3, 5]));
+
+// 32. Array-2 > sum13---------------------------------------------------------------------------------
+
+/*
+Return the sum of the numbers in the array, returning 0 for an empty array. Except the number 13 is very unlucky, 
+so it does not count and numbers that come immediately after a 13 also do not count.
+*/
+
+// sum13([1, 2, 2, 1]) → 6
+// sum13([1, 1]) → 2
+// sum13([1, 2, 2, 1, 13]) → 6
+
+function sum13(nums) {
+  if (nums.length == 0) {
+    return 0;
+  }
+  if (nums.indexOf(13) != -1) {
+    nums.splice(nums.indexOf(13), 2);
+  }
+  let sum = 0;
+  for (let i = 0; i <= nums.length - 1; i++) {
+    sum += nums[i];
+  }
+  return sum;
+}
+
+console.log(sum13([1, 2, 2, 1]));
+console.log(sum13([1, 1]));
+console.log(sum13([1, 2, 2, 1, 13]));
