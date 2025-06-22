@@ -1182,7 +1182,40 @@ function reverseArrayByK(arr, k) {
 
 }
 
-console.log(reverseArrayByK([1, 2, 3, 4, 5], 2));
-console.log(reverseArrayByK([1, 2, 3, 4, 5], 0));
-console.log(reverseArrayByK([1, 2, 3, 4, 5], 5));
-console.log(reverseArrayByK([1, 2, 3, 4, 5], 6));
+// console.log(reverseArrayByK([1, 2, 3, 4, 5], 2));
+// console.log(reverseArrayByK([1, 2, 3, 4, 5], 0));
+// console.log(reverseArrayByK([1, 2, 3, 4, 5], 5));
+// console.log(reverseArrayByK([1, 2, 3, 4, 5], 6));
+
+
+// 37. String-2 > reverse array---------------------------------------------------------------------------------
+
+// Given an array, reverse the elements of the array in place.
+// reverseArray([1, 2, 3, 4, 5]) → [5, 4, 3, 2, 1]
+// reverseArray([1, 2, 3, 4, 5, 6]) → [6, 5, 4, 3, 2, 1]
+// reverseArray([1, 2, 3, 4, 5, 6, 7]) → [7, 6, 5, 4, 3, 2, 1]
+
+function reverseArray(arr){
+  let reverseArr = []
+  
+  for (let i = arr.length-1; i >= 0; i--) {
+    reverseArr.push(arr[i])
+  }
+  return reverseArr;
+}
+
+// console.log(reverseArray([1,2,3,4]))
+
+function reverseArray2(arr){
+
+  let lastLen = arr.length-1
+  for (let i = 0; i < Math.floor(arr.length/2); i++) {
+    let temp = arr[i];
+    arr[i] = arr[lastLen]
+    arr[lastLen--] = temp;
+  }
+  return arr
+  
+}
+
+// console.log(reverseArray2([1,2,3,4, 5, 6, 7]))
