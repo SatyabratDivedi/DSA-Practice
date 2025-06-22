@@ -84,18 +84,17 @@ const isAnagtam = function (a, b) {
 //7. find the second largest number  -------------------------------------------------------
 
 var arr = [19, 32, 32, 23, 14, 33, 33, 5];
-const secondLargestNum = function (x) {
-  //first method
+const secondLargestNum = function (x) {  //first method
   const data = x.sort((a, b) => a - b);
   const lastNum = data[data.length - 1];
   const secondLargestNumber = data.findLast((a) => a < lastNum);
-  console.log("secondLargestNumber: ", secondLargestNumber);
+  // console.log("secondLargestNumber: ", secondLargestNumber);
 
   //second method
   const uniqArr = new Set(x); //remove duplicate
   const sortedArr = Array.from(uniqArr).sort((a, b) => a - b);
   const secondLargestNum = sortedArr[sortedArr.length - 2];
-  console.log("secondLargestNum: ", secondLargestNum, typeof secondLargestNum);
+  // console.log("secondLargestNum: ", secondLargestNum, typeof secondLargestNum);
 };
 // secondLargestNum(arr)
 
@@ -104,9 +103,9 @@ const secondLargestNum = function (x) {
 let arr1 = ["1", "2", "3", "4", "5", "6", "7"];
 const oppositeFrom = function (arr1, nth) {
   const lastNthNum = arr1.splice(arr1.length - nth);
-  console.log("lastNthNum: ", lastNthNum);
+  // console.log("lastNthNum: ", lastNthNum);
   arr1.unshift(...lastNthNum);
-  console.log(arr1);
+  // console.log(arr1);
 };
 // oppositeFrom(arr1, 2);
 
@@ -222,7 +221,7 @@ const uniqueArr = () => {
   const uni = arrForUniq.filter((num, index, self) => {
     return self.indexOf(num) === index;
   });
-  console.log(uni);
+  // console.log(uni);
 };
 // uniqueArr()
 
@@ -235,7 +234,7 @@ const uniqArray = () => {
       uniqArr.push(arrForUniq[i]);
     }
   }
-  console.log(uniqArr);
+  // console.log(uniqArr);
 };
 uniqArray();
 
@@ -248,7 +247,7 @@ var arr3 = [1, 2, 3, 4, 5]; //=> false
 var isRepetedLetter = function (recArr) {
   return [...new Set(recArr)].length !== recArr.length;
 };
-console.log(isRepetedLetter(arr3));
+// console.log(isRepetedLetter(arr3));
 
 // here i am stating dsa which is given by cuvette course
 
@@ -274,10 +273,10 @@ function cigarParty(cigars, isWeekend) {
   }
 }
 
-console.log(cigarParty(30, false));
-console.log(cigarParty(50, false));
-console.log(cigarParty(70, true));
-console.log(cigarParty(30, true));
+// console.log(cigarParty(30, false));
+// console.log(cigarParty(50, false));
+// console.log(cigarParty(70, true));
+// console.log(cigarParty(30, true));
 
 // 2. Logic-1 > dateFashion----------------------------------------------------------------------------------
 
@@ -303,11 +302,11 @@ function dateFashion(you, date) {
   }
 }
 
-console.log(dateFashion(5, 10));
-console.log(dateFashion(5, 2));
-console.log(dateFashion(5, 5));
-console.log(dateFashion(10, 2));
-console.log(dateFashion(2, 9));
+// console.log(dateFashion(5, 10));
+// console.log(dateFashion(5, 2));
+// console.log(dateFashion(5, 5));
+// console.log(dateFashion(10, 2));
+// console.log(dateFashion(2, 9));
 
 // 3. Logic-1 > squirrelPlay----------------------------------------------------------------------------------
 
@@ -331,9 +330,9 @@ function squirrelPlay(temp, isSummer) {
   }
 }
 
-console.log(squirrelPlay(70, false));
-console.log(squirrelPlay(95, false));
-console.log(squirrelPlay(95, true));
+// console.log(squirrelPlay(70, false));
+// console.log(squirrelPlay(95, false));
+// console.log(squirrelPlay(95, true));
 
 // 4. Logic-1 > sortaSum----------------------------------------------------------------------------------
 
@@ -354,9 +353,9 @@ function sortaSum(a, b) {
   }
 }
 
-console.log(sortaSum(3, 4));
-console.log(sortaSum(9, 4));
-console.log(sortaSum(10, 11));
+// console.log(sortaSum(3, 4));
+// console.log(sortaSum(9, 4));
+// console.log(sortaSum(10, 11));
 
 // 5. Logic-1 > alarmClock----------------------------------------------------------------------------------
 
@@ -380,10 +379,10 @@ function alarmClock(day, vacation) {
   }
 }
 
-console.log(alarmClock(1, false));
-console.log(alarmClock(5, false));
-console.log(alarmClock(0, false));
-console.log(alarmClock(0, true));
+// console.log(alarmClock(1, false));
+// console.log(alarmClock(5, false));
+// console.log(alarmClock(0, false));
+// console.log(alarmClock(0, true));
 
 // 6. Logic-1 > love6----------------------------------------------------------------------------------
 
@@ -404,9 +403,9 @@ function love6(a, b) {
   }
 }
 
-console.log(love6(6, 4));
-console.log(love6(4, 5));
-console.log(love6(1, 5));
+// console.log(love6(6, 4));
+// console.log(love6(4, 5));
+// console.log(love6(1, 5));
 
 // 7. Logic-1 > in1To10----------------------------------------------------------------------------------
 
@@ -428,9 +427,9 @@ function in1To10(n, outsideMode) {
   }
 }
 
-console.log(in1To10(5, false));
-console.log(in1To10(11, false));
-console.log(in1To10(11, true));
+// console.log(in1To10(5, false));
+// console.log(in1To10(11, false));
+// console.log(in1To10(11, true));
 
 // 8. Logic-1 > specialEleven----------------------------------------------------------------------------------
 
@@ -447,9 +446,9 @@ function specialEleven(n) {
   return n % 11 == 0 || n % 11 == 1;
 }
 
-console.log(specialEleven(22));
-console.log(specialEleven(23));
-console.log(specialEleven(24));
+// console.log(specialEleven(22));
+// console.log(specialEleven(23));
+// console.log(specialEleven(24));
 
 // 9. Logic-1 > more20----------------------------------------------------------------------------------
 
@@ -465,9 +464,9 @@ function more20(n) {
   return n % 20 == 1 || n % 20 == 2;
 }
 
-console.log(more20(20));
-console.log(more20(21));
-console.log(more20(22));
+// console.log(more20(20));
+// console.log(more20(21));
+// console.log(more20(22));
 
 // 10. Logic-1 > old35----------------------------------------------------------------------------------
 
@@ -484,9 +483,9 @@ function old35(n) {
   return n % 3 == 0 || n % 5 == 0;
 }
 
-console.log(old35(3));
-console.log(old35(10));
-console.log(old35(15));
+// console.log(old35(3));
+// console.log(old35(10));
+// console.log(old35(15));
 
 // 10. Logic-1 > less20----------------------------------------------------------------------------------
 
@@ -506,12 +505,12 @@ function less20(n) {
   return (n + 1) % 20 == 0 || (n + 2) % 20 == 0;
 }
 
-console.log(less20(18));
-console.log(less20(19));
-console.log(less20(20));
-console.log(less20(38));
-console.log(less20(39));
-console.log(less20(40));
+// console.log(less20(18));
+// console.log(less20(19));
+// console.log(less20(20));
+// console.log(less20(38));
+// console.log(less20(39));
+// console.log(less20(40));
 
 // 11. Logic-1 > nearTen----------------------------------------------------------------------------------
 
@@ -528,9 +527,9 @@ function nearTen(num) {
   return num % 10 == 0 || (num + 1) % 10 == 0 || (num + 2) % 10 == 0 || (num - 1) % 10 == 0 || (num - 2) % 10 == 0;
 }
 
-console.log(nearTen(12));
-console.log(nearTen(17));
-console.log(nearTen(19));
+// console.log(nearTen(12));
+// console.log(nearTen(17));
+// console.log(nearTen(19));
 
 // 12. Logic-2 > makeBricks----------------------------------------------------------------------------------
 
@@ -554,12 +553,12 @@ function makeBricks(small, big, goal) {
   return needAfterBigBricks <= small;
 }
 
-console.log(makeBricks(3, 6, 18));
-console.log(makeBricks(3, 1, 9));
-console.log(makeBricks(3, 2, 10));
-console.log(makeBricks(7, 1, 11));
-console.log(makeBricks(3, 2, 8));
-console.log(makeBricks(1, 4, 11));
+// console.log(makeBricks(3, 6, 18));
+// console.log(makeBricks(3, 1, 9));
+// console.log(makeBricks(3, 2, 10));
+// console.log(makeBricks(7, 1, 11));
+// console.log(makeBricks(3, 2, 8));
+// console.log(makeBricks(1, 4, 11));
 
 // 13. Logic-2 > loneSum----------------------------------------------------------------------------------
 
@@ -589,9 +588,9 @@ function loneSum(a, b, c) {
   }
 }
 
-console.log(loneSum(1, 2, 3));
-console.log(loneSum(3, 2, 3));
-console.log(loneSum(3, 3, 3));
+// console.log(loneSum(1, 2, 3));
+// console.log(loneSum(3, 2, 3));
+// console.log(loneSum(3, 3, 3));
 
 // 14. Logic-2 > luckySum----------------------------------------------------------------------------------
 
@@ -618,9 +617,9 @@ function luckySum(a, b, c) {
   }
 }
 
-console.log(luckySum(1, 2, 3));
-console.log(luckySum(1, 2, 13));
-console.log(luckySum(1, 13, 3));
+// console.log(luckySum(1, 2, 3));
+// console.log(luckySum(1, 2, 13));
+// console.log(luckySum(1, 13, 3));
 
 // 15. Logic-2 > noTeenSum----------------------------------------------------------------------------------
 
@@ -654,10 +653,10 @@ function noTeenSum(a, b, c) {
   return a + b + c;
 }
 
-console.log(noTeenSum(1, 2, 3));
-console.log(noTeenSum(2, 13, 1));
-console.log(noTeenSum(2, 1, 14));
-console.log(noTeenSum(2, 1, 15));
+// console.log(noTeenSum(1, 2, 3));
+// console.log(noTeenSum(2, 13, 1));
+// console.log(noTeenSum(2, 1, 14));
+// console.log(noTeenSum(2, 1, 15));
 
 // 16. Logic-2 > roundSum----------------------------------------------------------------------------------
 
@@ -680,11 +679,11 @@ function roundSum(a, b, c) {
   return a + b + c;
 }
 
-console.log(roundSum(15, 17, 18));
-console.log(roundSum(12, 13, 14));
-console.log(roundSum(6, 4, 4));
-console.log(roundSum(6, 4, 4));
-console.log(roundSum(4, 6, 5));
+// console.log(roundSum(15, 17, 18));
+// console.log(roundSum(12, 13, 14));
+// console.log(roundSum(6, 4, 4));
+// console.log(roundSum(6, 4, 4));
+// console.log(roundSum(4, 6, 5));
 
 // 17. String-1 > makeAbba---------------------------------------------------------------------------------
 
@@ -700,9 +699,9 @@ function helloName(name) {
   return `Hello ${name}!`;
 }
 
-console.log(helloName("Bob"));
-console.log(helloName("Alice"));
-console.log(helloName("X"));
+// console.log(helloName("Bob"));
+// console.log(helloName("Alice"));
+// console.log(helloName("X"));
 
 // 18. String-1 > makeAbba---------------------------------------------------------------------------------
 
@@ -718,9 +717,9 @@ function makeAbba(a, b) {
   return a + b + b + a;
 }
 
-console.log(makeAbba("Hi", "Bye"));
-console.log(makeAbba("Yo", "Alice"));
-console.log(makeAbba("What", "Up"));
+// console.log(makeAbba("Hi", "Bye"));
+// console.log(makeAbba("Yo", "Alice"));
+// console.log(makeAbba("What", "Up"));
 
 // 19. String-1 > makeTags---------------------------------------------------------------------------------
 /*
@@ -736,9 +735,9 @@ function makeTags(tag, word) {
   return `<${tag}>${word}</${tag}>`;
 }
 
-console.log(makeTags("i", "Yay"));
-console.log(makeTags("i", "Hello"));
-console.log(makeTags("cite", "Yay"));
+// console.log(makeTags("i", "Yay"));
+// console.log(makeTags("i", "Hello"));
+// console.log(makeTags("cite", "Yay"));
 
 // 20. String-1 > makeOutWord---------------------------------------------------------------------------------
 
@@ -757,9 +756,9 @@ function makeOutWord(out, word) {
   return newWord.join("");
 }
 
-console.log(makeOutWord("<<>>", "Yay"));
-console.log(makeOutWord("<<>>", "WooHoo"));
-console.log(makeOutWord("[[]]", "word"));
+// console.log(makeOutWord("<<>>", "Yay"));
+// console.log(makeOutWord("<<>>", "WooHoo"));
+// console.log(makeOutWord("[[]]", "word"));
 
 // 21. String-1 > extraEnd---------------------------------------------------------------------------------
 
@@ -779,9 +778,9 @@ function extraEnd(str) {
   return newStr + newStr + newStr;
 }
 
-console.log(extraEnd("Hello"));
-console.log(extraEnd("ab"));
-console.log(extraEnd("Hi"));
+// console.log(extraEnd("Hello"));
+// console.log(extraEnd("ab"));
+// console.log(extraEnd("Hi"));
 
 // 22. String-2 > doubleChar---------------------------------------------------------------------------------
 
@@ -801,9 +800,9 @@ function doubleChar(str) {
   return newWord.join("");
 }
 
-console.log(doubleChar("The"));
-console.log(doubleChar("AAbb"));
-console.log(doubleChar("Hi-There"));
+// console.log(doubleChar("The"));
+// console.log(doubleChar("AAbb"));
+// console.log(doubleChar("Hi-There"));
 
 // 23. String-2 > countHi---------------------------------------------------------------------------------
 
@@ -825,9 +824,9 @@ function countHi(str) {
   return count;
 }
 
-console.log(countHi("abc hi ho"));
-console.log(countHi("ABChi hi"));
-console.log(countHi("hihi"));
+// console.log(countHi("abc hi ho"));
+// console.log(countHi("ABChi hi"));
+// console.log(countHi("hihi"));
 
 // 24. String-2 > countCode---------------------------------------------------------------------------------
 
@@ -850,9 +849,9 @@ function countCode(str) {
   return count;
 }
 
-console.log(countCode("aaacodebbb"));
-console.log(countCode("codexxcode"));
-console.log(countCode("cozexxcope"));
+// console.log(countCode("aaacodebbb"));
+// console.log(countCode("codexxcode"));
+// console.log(countCode("cozexxcope"));
 
 // 25. String-2 > endOther---------------------------------------------------------------------------------
 
@@ -870,9 +869,9 @@ function endOther(a, b) {
   return a.endsWith(b) || b.endsWith(a);
 }
 
-console.log(endOther("Hiabc", "abc"));
-console.log(endOther("AbC", "HiaBc"));
-console.log(endOther("abc", "abXabc"));
+// console.log(endOther("Hiabc", "abc"));
+// console.log(endOther("AbC", "HiaBc"));
+// console.log(endOther("abc", "abXabc"));
 
 // 26. String-2 > xyzThere---------------------------------------------------------------------------------
 
@@ -892,9 +891,9 @@ function xyzThere(str) {
   }
 }
 
-console.log(xyzThere("abcxyz"));
-console.log(xyzThere("abc.xyz"));
-console.log(xyzThere("xyz.abc"));
+// console.log(xyzThere("abcxyz"));
+// console.log(xyzThere("abc.xyz"));
+// console.log(xyzThere("xyz.abc"));
 
 // 27. String-2 > mixString---------------------------------------------------------------------------------
 
@@ -916,9 +915,9 @@ function mixString(a, b) {
   return newWord.join("");
 }
 
-console.log(mixString("abc", "xyz"));
-console.log(mixString("Hi", "There"));
-console.log(mixString("xxxx", "There"));
+// console.log(mixString("abc", "xyz"));
+// console.log(mixString("Hi", "There"));
+// console.log(mixString("xxxx", "There"));
 
 // 28. Array-1 > firstLast6---------------------------------------------------------------------------------
 
@@ -935,9 +934,9 @@ function firstLast6(nums) {
   return nums[0] === 6 || nums[nums.length - 1] === 6;
 }
 
-console.log(firstLast6([1, 2, 6]));
-console.log(firstLast6([6, 1, 2, 3]));
-console.log(firstLast6([13, 6, 1, 2, 3]));
+// console.log(firstLast6([1, 2, 6]));
+// console.log(firstLast6([6, 1, 2, 3]));
+// console.log(firstLast6([13, 6, 1, 2, 3]));
 
 // 29. Array-1 > commonEnd---------------------------------------------------------------------------------
 
@@ -958,10 +957,10 @@ function commonEnd(a, b) {
   return a[0] == b[0] || a[a.length - 1] == b[b.length - 1];
 }
 
-console.log(commonEnd([1, 2, 3], [7, 3]));
-console.log(commonEnd([1, 2, 3], [7, 3, 2]));
-console.log(commonEnd([1, 2, 3], [1, 3]));
-console.log(commonEnd([3], [1, 3]));
+// console.log(commonEnd([1, 2, 3], [7, 3]));
+// console.log(commonEnd([1, 2, 3], [7, 3, 2]));
+// console.log(commonEnd([1, 2, 3], [1, 3]));
+// console.log(commonEnd([3], [1, 3]));
 
 // 30. Array-1 > rotateLeft3---------------------------------------------------------------------------------
 
@@ -983,9 +982,9 @@ function rotateLeft3(nums) {
   return newArr;
 }
 
-console.log(rotateLeft3([1, 2, 3]));
-console.log(rotateLeft3([5, 11, 9]));
-console.log(rotateLeft3([7, 0, 0]));
+// console.log(rotateLeft3([1, 2, 3]));
+// console.log(rotateLeft3([5, 11, 9]));
+// console.log(rotateLeft3([7, 0, 0]));
 
 // 31. Array-2 > countEvens---------------------------------------------------------------------------------
 
@@ -1007,9 +1006,9 @@ function countEvens(nums) {
   return count;
 }
 
-console.log(countEvens([2, 1, 2, 3, 4]));
-console.log(countEvens([2, 2, 0]));
-console.log(countEvens([1, 3, 5]));
+// console.log(countEvens([2, 1, 2, 3, 4]));
+// console.log(countEvens([2, 2, 0]));
+// console.log(countEvens([1, 3, 5]));
 
 // 32. Array-2 > sum13---------------------------------------------------------------------------------
 
@@ -1036,9 +1035,9 @@ function sum13(nums) {
   return sum;
 }
 
-console.log(sum13([1, 2, 2, 1]));
-console.log(sum13([1, 1]));
-console.log(sum13([1, 2, 2, 1, 13]));
+// console.log(sum13([1, 2, 2, 1]));
+// console.log(sum13([1, 1]));
+// console.log(sum13([1, 2, 2, 1, 13]));
 
 
 // 33. Array-2 > sum67---------------------------------------------------------------------------------
@@ -1065,7 +1064,7 @@ function sum67(nums) {
       if (find7Index > find6Index) {
         let sum = 0;
         for (let i = 0; i <= nums.length - 1; i++) {
-          console.log('this is the number: ', nums[i]);
+// console.log('this is the number: ', nums[i]);
           sum += nums[i];
         } 
         return sum;
@@ -1075,10 +1074,10 @@ function sum67(nums) {
   return nums.reduce((a, b) => a + b, 0);
 }
 
-console.log(sum67([1, 2, 2]));
-console.log(sum67([6, 3, 5, 7]));
-console.log(sum67([1, 2, 2, 6, 99, 99, 7]));
-console.log(sum67([1, 1, 6, 7, 2]));
+// console.log(sum67([1, 2, 2]));
+// console.log(sum67([6, 3, 5, 7]));
+// console.log(sum67([1, 2, 2, 6, 99, 99, 7]));
+// console.log(sum67([1, 1, 6, 7, 2]));
 
 
 // 34. Array-2 > has22---------------------------------------------------------------------------------
@@ -1100,9 +1099,9 @@ function has22(nums) {
   return false;
 }
 
-console.log(has22([1, 2, 2]));
-console.log(has22([1, 2, 1, 2]));
-console.log(has22([2, 1, 2]));
+// console.log(has22([1, 2, 2]));
+// console.log(has22([1, 2, 1, 2]));
+// console.log(has22([2, 1, 2]));
 
 
 // 35. Array-2 > countYZ---------------------------------------------------------------------------------
@@ -1131,9 +1130,9 @@ function countYZ(str) {
   return countNum;
 }
 
-console.log(countYZ("fez day"));
-console.log(countYZ("day fez"));
-console.log(countYZ("day fyyyz"));
+// console.log(countYZ("fez day"));
+// console.log(countYZ("day fez"));
+// console.log(countYZ("day fyyyz"));
 
 
 // 36. String-2 > withoutString---------------------------------------------------------------------------------
@@ -1150,11 +1149,11 @@ function withoutString(base, remove) {
   remove = remove.toLowerCase();
   if(remove.length>=3 && remove[0]===remove[1] && remove[1]===remove[2]){
     remove = remove[0]+remove[1];
-    console.log(remove)
+// console.log(remove)
   }
   return base.replaceAll(remove, "");
 }
 
-console.log(withoutString("Hello therlloe", "llo"));
-console.log(withoutString("Hello there", "e"));
-console.log(withoutString("xHelxlo thexre", "x"));
+// console.log(withoutString("Hello therlloe", "llo"));
+// console.log(withoutString("Hello there", "e"));
+// console.log(withoutString("xHelxlo thexre", "x"));
