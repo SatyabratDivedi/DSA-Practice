@@ -1157,3 +1157,32 @@ function withoutString(base, remove) {
 // console.log(withoutString("Hello therlloe", "llo"));
 // console.log(withoutString("Hello there", "e"));
 // console.log(withoutString("xHelxlo thexre", "x"));
+
+
+// 37. String-2 > reverse array by k---------------------------------------------------------------------------------
+
+// Given an array and a number k, reverse the elements of the array from index k to the end of the array. and 
+// reverseArrayByK([1, 2, 3, 4, 5], 2) → [4, 5, 3, 2, 1]
+// reverseArrayByK([1, 2, 3, 4, 5], 0) → [1, 2, 3, 4, 5]
+// reverseArrayByK([1, 2, 3, 4, 5], 5) → [1, 2, 3, 4, 5]
+// reverseArrayByK([1, 2, 3, 4, 5], 6) → [5, 1, 2, 3, 4]
+
+function reverseArrayByK(arr, k) {
+  if(k > arr.length){
+    k = k % arr.length
+  }
+
+  let startingLengthToReverse = arr.length - k;
+  let newArr = []
+
+
+  const afterRemove = arr.splice(startingLengthToReverse, k)
+  newArr.push(...afterRemove, ...arr)
+  return newArr
+
+}
+
+console.log(reverseArrayByK([1, 2, 3, 4, 5], 2));
+console.log(reverseArrayByK([1, 2, 3, 4, 5], 0));
+console.log(reverseArrayByK([1, 2, 3, 4, 5], 5));
+console.log(reverseArrayByK([1, 2, 3, 4, 5], 6));
